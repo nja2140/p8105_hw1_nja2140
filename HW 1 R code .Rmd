@@ -24,7 +24,7 @@ mean(pull(problem1_df, vec_logical))
 mean(pull(problem1_df, vec_char))
 mean(pull(problem1_df, vec_factor))
 
-echo = FALSE
+eval = FALSE
 as.numeric(pull(problem1_df, vec_logical))
 as.numeric(pull(problem1_df, vec_char))
 as.numeric(pull(problem1_df, vec_factor))
@@ -42,6 +42,7 @@ as.numeric(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp))
 as.factor(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp))
 as.numeric(as.factor(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp)))
 ```
+
 Problem 2: Create a data frame comprised of:
 x: a random sample of size 500 from a standard Normal distribution
 y: a random sample of size 500 from a standard Normal distribution

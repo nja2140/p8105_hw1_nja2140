@@ -63,7 +63,7 @@ mean(pull(problem1_df, vec_factor))
     ## [1] NA
 
 ``` r
-echo = FALSE
+results = 'hide'
 as.numeric(pull(problem1_df, vec_logical))
 ```
 
