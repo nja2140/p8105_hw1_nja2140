@@ -1,5 +1,6 @@
 p8105\_hw1\_nja
 ================
+Naina Ahuja
 
 Problem 1: create a data frame comprised of: a random sample of size 8
 from a standard Normal distribution a logical vector indicating whether
@@ -63,25 +64,10 @@ mean(pull(problem1_df, vec_factor))
     ## [1] NA
 
 ``` r
-results = 'hide'
 as.numeric(pull(problem1_df, vec_logical))
-```
-
-    ## [1] 1 1 0 0 0 0 1 1
-
-``` r
 as.numeric(pull(problem1_df, vec_char))
-```
-
-    ## Warning: NAs introduced by coercion
-
-    ## [1] NA NA NA NA NA NA NA NA
-
-``` r
 as.numeric(pull(problem1_df, vec_factor))
 ```
-
-    ## [1] 2 3 1 2 1 3 2 3
 
 I was able to take the mean of the first 2 variables of norm\_samp and
 vec\_logical. I was not able to take the mean of the second 2 variables
@@ -102,10 +88,10 @@ In a second code chunk: convert the logical vector to numeric, and
 multiply the random sample by the result convert the logical vector to a
 factor, and multiply the random sample by the result convert the logical
 vector to a factor and then convert the result to numeric, and multiply
-the random sample by the result
+the random sample by the
+result
 
 ``` r
-eval = TRUE
 as.numeric(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp))
 ```
 
@@ -161,29 +147,24 @@ deviation is 1.0348139 The proportion of cases for which x + y \>1 is
 Make a scatterplot of y vs x; color points using the logical variable
 (adding color = … inside of aes in your ggplot code should help). Make a
 second and third scatterplot that color points using the numeric and
-factor variables, respectively, and comment on the color
-scales
+factor variables, respectively, and comment on the color scales
 
 ``` r
 ggplot(problem2_df) + geom_point(aes(x = x, y = y), color = 'blue') 
 ```
 
-![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
-ggsave("scatter_plot.pdf", plot = last_plot())
-```
+ggsave("scatter_plot.pdf", plot = last_plot(), height =4, width = 6)
 
-    ## Saving 7 x 5 in image
-
-``` r
 ggplot(problem2_df) + geom_point(aes(x=vec_numeric_2, y=y), color = 'pink')
 ```
 
-![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 ggplot(problem2_df) + geom_point(aes(x=vec_factor_2, y=y), color = 'yellow')
 ```
 
-![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+![](HW-1-R-code-_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->

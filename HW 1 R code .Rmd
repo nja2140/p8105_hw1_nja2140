@@ -1,5 +1,6 @@
 ---
 title: "p8105_hw1_nja"
+author: Naina Ahuja
 output: github_document
 ---
 
@@ -23,8 +24,9 @@ mean(pull(problem1_df, norm_samp))
 mean(pull(problem1_df, vec_logical))
 mean(pull(problem1_df, vec_char))
 mean(pull(problem1_df, vec_factor))
+```
 
-eval = FALSE
+```{r eval = FALSE}
 as.numeric(pull(problem1_df, vec_logical))
 as.numeric(pull(problem1_df, vec_char))
 as.numeric(pull(problem1_df, vec_factor))
@@ -37,7 +39,6 @@ convert the logical vector to a factor, and multiply the random sample by the re
 convert the logical vector to a factor and then convert the result to numeric, and multiply the random sample by the result
 
 ```{r}
-eval = TRUE
 as.numeric(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp))
 as.factor(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp))
 as.numeric(as.factor(pull(problem1_df, vec_logical))*(pull(problem1_df, norm_samp)))
@@ -51,7 +52,6 @@ A numeric vector created by coercing the above logical vector
 A factor vector created by coercing the above logical vector
 
 ```{r}
-
 set.seed(1234)
 problem2_df = tibble(
   x = rnorm(500),
@@ -78,7 +78,7 @@ Make a scatterplot of y vs x; color points using the logical variable (adding co
 
 ```{r}
 ggplot(problem2_df) + geom_point(aes(x = x, y = y), color = 'blue') 
-ggsave("scatter_plot.pdf", plot = last_plot())
+ggsave("scatter_plot.pdf", plot = last_plot(), height =4, width = 6)
 
 ggplot(problem2_df) + geom_point(aes(x=vec_numeric_2, y=y), color = 'pink')
 
