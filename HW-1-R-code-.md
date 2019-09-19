@@ -63,7 +63,7 @@ mean(pull(problem1_df, vec_factor))
     ## [1] NA
 
 ``` r
-eval = FALSE
+echo = FALSE
 as.numeric(pull(problem1_df, vec_logical))
 ```
 
@@ -137,7 +137,6 @@ x + y \> 1 A numeric vector created by coercing the above logical vector
 A factor vector created by coercing the above logical vector
 
 ``` r
-library(tidyverse)
 set.seed(1234)
 problem2_df = tibble(
   x = rnorm(500),

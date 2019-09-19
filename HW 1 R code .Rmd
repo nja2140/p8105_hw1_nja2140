@@ -23,7 +23,8 @@ mean(pull(problem1_df, norm_samp))
 mean(pull(problem1_df, vec_logical))
 mean(pull(problem1_df, vec_char))
 mean(pull(problem1_df, vec_factor))
-eval = FALSE
+
+echo = FALSE
 as.numeric(pull(problem1_df, vec_logical))
 as.numeric(pull(problem1_df, vec_char))
 as.numeric(pull(problem1_df, vec_factor))
@@ -49,7 +50,7 @@ A numeric vector created by coercing the above logical vector
 A factor vector created by coercing the above logical vector
 
 ```{r}
-library(tidyverse)
+
 set.seed(1234)
 problem2_df = tibble(
   x = rnorm(500),
@@ -82,7 +83,6 @@ ggplot(problem2_df) + geom_point(aes(x=vec_numeric_2, y=y), color = 'pink')
 
 ggplot(problem2_df) + geom_point(aes(x=vec_factor_2, y=y), color = 'yellow')
 ```
-
 
 
 
